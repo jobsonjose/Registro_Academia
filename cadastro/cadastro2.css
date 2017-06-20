@@ -1,0 +1,26 @@
+h1,h2{
+	text-align: center;
+}.formularioMaior{
+	width: 50%;
+	margin:auto;
+	padding: 2%;
+	border-radius: 15px;
+	background: #EEDD82;
+	 
+}.tamanho{
+	width: 100%;
+	border: 8pX;
+	border-radius: 8pX;
+	background: #A9A9A9;
+	color: green;
+}
+#botao{
+	width: 40%;
+	background: #A9A9A9;
+	margin-left:  30%;
+
+}
+#tamanho{
+	width: 100%;
+	background: #EEDD82;
+}
