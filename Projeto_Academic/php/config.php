@@ -5,9 +5,9 @@
 
         $dsn = "mysql:host=localhost;dbname=bd-wta";
 
-        $pdo = new PDO($dsn, $user);
-    if(isset($_SESSION['user'])){
-        header("location: home.php");
+        $pdo = new PDO($dsn, $user, $pass);
+    if(!isset($_SESSION['user'])){
+        header("location: index.php");
     }
 
 ?>
