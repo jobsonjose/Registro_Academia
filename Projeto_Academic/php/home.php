@@ -1,6 +1,10 @@
 <?php 
     require 'config.php';
     
+    $ret = $pdo->query("SELECT * FROM CLIENTS");
+    $result = $ret->fetchall();
+
+
 ?>
 <html>
     <header>
@@ -15,9 +19,19 @@
             <table>
                 <tr><th>ID</th>
                 <th>Nome</th>
-                <th>Email</th>
-                <th>Pagamento</th>
-                <th>Remove</th></tr>
+                <th>Email</th></tr>
+
+                <tr>
+                <?php
+                    for ($i=0; $i < count($result); $i++) { 
+                ?>
+                        <td><?php echo $result[0]['CLI_ID']?></td>
+                        <td><?php echo $result[0]['CLI_NOME']?></td>
+                        <td><?php echo $result[0]['CLI_EMAIL']?></td>
+                </tr>
+                <?php
+                    }
+            ?>
             </table>
         </div>
         <div class="services">
